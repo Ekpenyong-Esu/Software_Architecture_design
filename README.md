@@ -58,3 +58,14 @@ Plan for future enhancements, updates, and refactoring.
 Embrace agile practices to adapt the architecture as needed.
 Continuously monitor system performance, reliability, and security.
 This is a high-level overview of the software architecture design process. Depending on the project's complexity, additional steps and considerations may be necessary. Additionally, each step often involves collaboration among various stakeholders, including developers, architects, business analysts, and end-users.
+
+## Software Architecture Terms
+
+oftware architecture is all about designing the structure of a software system. It's like the blueprint for a building, but instead of bricks and mortar, you're dealing with code and data. A well-designed software architecture can make a system easier to develop, maintain, and scale.
+
+Here are some of the key concepts in software architecture:
+
+# Components: The building blocks of a software system. Components can be individual modules, classes, or libraries.
+# Connectors: The glue that holds the components together. Connectors define how components interact with each other.
+# Interfaces: The contracts between components. Interfaces define what services a component provides and what it expects from other components.
+# Styles: Architectural styles are patterns for organizing software systems. Some common architectural styles include layered architecture, microservices architecture, and event-driven architecture.
