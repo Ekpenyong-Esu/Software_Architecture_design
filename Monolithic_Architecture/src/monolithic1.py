@@ -1,16 +1,9 @@
-"""
-Monolithic architecture refers to a traditional software design 
-approach where all components of an application are combined into a 
-single codebase and deployed as a single unit. Here's a simplified 
-example of a monolithic Python project:
-"""
-
 import os
 
 
 class FileManagementSystem:
     """
-    Monolythic Architecture styles to manage files in a directory.
+    Monolithic Architecture styles to manage files in a directory.
     """
 
     def __init__(self):
@@ -18,38 +11,47 @@ class FileManagementSystem:
 
     def list_files(self):
         files = os.listdir(self.current_directory)
-        for file in files:
-            print(file)
+        file_list = "\n".join(files)
+        print(file_list)
+        return file_list
 
     def create_file(self, filename):
         try:
             with open(os.path.join(self.current_directory, filename), "w"):
                 pass
             print(f"File '{filename}' created successfully.")
+            return True
         except Exception as e:
             print(f"Error creating file: {e}")
+            return False
 
     def delete_file(self, filename):
         try:
             os.remove(os.path.join(self.current_directory, filename))
             print(f"File '{filename}' deleted successfully.")
+            return True
         except Exception as e:
             print(f"Error deleting file: {e}")
+            return False
 
     def search_file(self, filename):
         files = os.listdir(self.current_directory)
         if filename in files:
             print(f"File '{filename}' found in directory.")
+            return f"File '{filename}' found in directory."
         else:
             print(f"File '{filename}' not found in directory.")
+            return f"File '{filename}' not found in directory."
 
     def change_directory(self, new_directory):
         try:
             os.chdir(new_directory)
             self.current_directory = new_directory
             print(f"Directory changed to '{new_directory}'.")
+            return True
         except Exception as e:
             print(f"Error changing directory: {e}")
+            return False
 
 
 # Sample usage
