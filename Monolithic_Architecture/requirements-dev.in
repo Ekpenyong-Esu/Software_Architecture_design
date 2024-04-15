@@ -1,0 +1,9 @@
+pylint==2.17.2
+black
+isort
+pytest==7.2.2
+pytest-cov
+nox
+flake8
+sphinx_rtd_theme
+

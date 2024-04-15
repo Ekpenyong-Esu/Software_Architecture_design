@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "wheel"]  # Specifies the build tools required
+build-backend = "setuptools.build_meta"  # Specifies the build backend to use
+
+[project]
+name = "Monolithic-architecture"  # The name of your project
+version = "1.0.0"  # The version number of your project
+authors = [  # List of authors
+    {name = "Ekpenyong Esu", email = "author@email.com"},
+]
+description = "Real-World Python Projects -- Project 0."  # A brief description of your project
+readme = "README.md"  # Path to your project's README file
+requires-python = ">=3.11"  # Specifies the minimum Python version required to run your project
+classifiers = [  # List of classifiers describing your project
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",  # Update with your license (optional)
+]
+dependencies = [  # List of required dependencies
+    # Add your project's dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    # Development tools
+    "sphinx==7.2.2",  # Documentation generator
+    "sphinxcontrib-plantuml==0.25",  # PlantUML support for Sphinx
+    "pip-tools==7.3.0",  # Tool for managing Python package dependencies
+    "nox==2023.4.6"  # Flexible test automation tool
+]
+test = [
+    # Testing tools
+    "pytest==7.4.0",  # Testing framework
+    "nox==2023.4.6",  # Flexible test automation tool
+    # Add other testing dependencies as needed
+]
